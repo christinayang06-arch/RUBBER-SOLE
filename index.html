@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HONGRUI Sole Maker | Custom Outsoles (Rubber, Ultra‑Light TPR, EVA)</title>
+  <meta name="description" content="OEM/ODM outsole manufacturer for footwear brands. Rubber, Ultra‑Lightweight TPR, EVA & TPU outsoles. Fast sampling, small MOQs, mold development, Pantone color matching, REACH/CA65 compliant." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Canonical (replace after deploy) -->
+  <link rel="canonical" href="https://example.com/outsoles" />
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HONGRUI Sole Maker | Custom Outsoles (Rubber, TPR, EVA)" />
+  <meta property="og:description" content="High‑quality outsoles: Rubber, Ultra‑Light TPR, EVA & TPU. Fast sampling, small MOQs, mold development, Pantone color matching." />
+  <meta property="og:image" content="images/og-sole.jpg" />
+  <meta property="og:url" content="https://example.com/outsoles" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON‑LD: Organization + OfferCatalog (Products) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HONGRUI Sole Maker",
+    "url": "https://example.com",
+    "logo": "https://example.com/images/logo.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "leo.liu@solemakers.vip",
+      "telephone": "+86-133-4269-1470",
+      "areaServed": "US, EU, APAC",
+      "availableLanguage": ["en", "zh"]
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "name": "Outsole Lines",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Rubber Outsoles"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Ultra‑Lightweight TPR Outsoles"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "EVA Outsoles"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "TPU Outsoles"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Leather Welt Outsoles"}}
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #111319;
+      --muted: #a7b0c0;
+      --text: #e8ecf3;
+      --brand: #3aa4ff;
+      --brand-2: #9bffd1;
+      --accent: #ffd166;
+      --accent-2: #ff9f1a;
+      --success: #30c48d;
+      --danger: #ff6b6b;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --maxw: 1180px;
+      --logoH-desktop: 68px;  /* 更大更显眼 */
+      --logoH-mobile: 52px;   /* 移动端略小 */
+      --brandName-desktop: 28px;
+      --brandName-mobile: 22px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    a { color: var(--brand); text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    .topbar { background: linear-gradient(90deg, rgba(58,164,255,.15), rgba(155,255,209,.10)); font-size: 13px; color: var(--muted); }
+    .topbar .container { display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 8px 20px; }
+    .topbar .hint { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .topbar .hint span { opacity: .9; }
+
+    .header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(6px); background: rgba(11,12,16,.7); border-bottom: 1px solid rgba(255,255,255,.06); }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; gap: 16px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; min-height: calc(var(--logoH-desktop) + 10px); }
+    .brand picture, .brand img { display:block; }
+    .brand img { height: var(--logoH-desktop); width: auto; border-radius: 10px; }
+    .brand b { letter-spacing: .3px; font-size: var(--brandName-desktop); font-weight: 900; }
+    .nav a { color: var(--text); opacity: .85; margin: 0 8px; font-weight: 700; }
+
+    .cta { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #03121a; padding: 11px 18px; border-radius: 999px; font-weight: 800; box-shadow: var(--shadow); }
+    .cta.alt { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #2b1300; }
+
+    /* Hero */
+    .hero { position: relative; padding: 76px 0 34px; background: radial-gradient(1200px 500px at 70% -15%, rgba(58,164,255,.15), transparent 60%),
+                                      radial-gradient(900px 500px at 20% -15%, rgba(155,255,209,.12), transparent 60%); }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--brand-2); font-weight: 800; font-size: 13px; letter-spacing: .6px; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(30px, 4.4vw, 56px); line-height: 1.04; margin: 10px 0 14px; }
+    .hero p { color: var(--muted); font-size: 17px; max-width: 62ch; }
+    .hero .cta-row { display: flex; gap: 14px; margin-top: 18px; flex-wrap: wrap; }
+    .btn-line { border: 1px solid rgba(255,255,255,.18); padding: 10px 16px; border-radius: 999px; font-weight: 800; color: var(--text); }
+    .hero-card { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 14px; }
+    .hero-figure { border-radius: var(--radius); overflow: hidden; background: #0f1219; border: 1px solid rgba(255,255,255,.06); box-shadow: var(--shadow); }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(48,196,141,.18); color: #bfffe7; padding: 6px 10px; border-radius: 999px; font-weight: 800; font-size: 12px; }
+
+    /* Contact highlight chips */
+    .contact-chip { display:inline-flex; align-items:center; gap:8px; padding:9px 14px; border-radius:999px; font-weight:900; letter-spacing:.2px; box-shadow: var(--shadow); font-size:14px; }
+    .chip-accent { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:#2b1300; }
+    .chip-brand { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#03121a; }
+
+    /* Trust marquee */
+    .marquee { border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); padding: 10px 0; overflow: hidden; }
+    .marquee-track { display: flex; gap: 40px; animation: scroll 26s linear infinite; white-space: nowrap; }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    .marquee b { opacity: .7; font-weight: 900; letter-spacing: .6px; }
+    @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+    /* Sections */
+    section { padding: 64px 0; }
+    .section-title { font-size: clamp(22px, 2.8vw, 36px); margin: 0 0 22px; }
+    .section-sub { color: var(--muted); max-width: 62ch; }
+
+    /* Product grid */
+    .grid { display: grid; gap: 18px; }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid.cols-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+    .card .body { padding: 16px; display: grid; gap: 8px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,.12); color: var(--muted); }
+    .meta { color: var(--muted); font-size: 14px; }
+
+    /* Feature list */
+    .features { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+    .feat { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 14px; display: grid; gap: 8px; }
+    .feat h4 { margin: 0; }
+
+    /* Timeline */
+    .timeline { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 14px; }
+    .step { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding: 14px; }
+    .step .num { font-weight: 900; font-size: 28px; color: var(--brand-2); }
+
+    /* Contact */
+    .contact { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; align-items: start; }
+    form { background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 18px; display: grid; gap: 12px; }
+    label { font-weight: 700; font-size: 14px; }
+    input, textarea, select { background: #0f1219; color: var(--text); border: 1px solid rgba(255,255,255,.14); border-radius: 10px; padding: 10px 12px; font: inherit; }
+    textarea { min-height: 120px; resize: vertical; }
+    .hint { color: var(--muted); font-size: 13px; }
+
+    /* Footer */
+    footer { border-top: 1px solid rgba(255,255,255,.08); background: #0a0b10; padding: 26px 0; color: var(--muted); }
+    .footer-contacts a { font-weight: 900; color: var(--accent); }
+    .footer-contacts a:hover { color: var(--accent-2); }
+
+    /* Mobile */
+    @media (max-width: 960px) {
+      .brand img { height: var(--logoH-mobile); }
+      .brand b { font-size: var(--brandName-mobile); }
+      .hero-grid, .contact { grid-template-columns: 1fr; }
+      .grid.cols-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid.cols-4 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .features { grid-template-columns: 1fr 1fr; }
+      .timeline { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .grid.cols-3, .grid.cols-4, .features { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr; }
+    }
+
+    /* Sticky mobile CTA */
+    .sticky-cta { position: sticky; bottom: 0; z-index: 40; backdrop-filter: saturate(140%) blur(6px); background: rgba(11,12,16,.85); border-top: 1px solid rgba(255,255,255,.08); padding: 10px 16px; display: none; }
+    @media (max-width: 960px) { .sticky-cta { display: block; } }
+
+    /* Floating quick-contact button */
+    .float-contact { position: fixed; right: 18px; bottom: 18px; z-index: 60; }
+  </style>
+</head>
+<body>
+  <!-- Topbar with highlighted contacts -->
+  <div class="topbar">
+    <div class="container">
+      <div class="hint"><span>Lead‑time for samples: <b>7–10 days</b></span><span>•</span><span>MOQ friendly</span></div>
+      <div class="hint" aria-label="Quick contacts">
+        <a class="contact-chip chip-accent" href="mailto:leo.liu@solemakers.vip" rel="nofollow noopener">✉️ leo.liu@solemakers.vip</a>
+        <a class="contact-chip chip-brand" href="https://wa.me/8613342691470" target="_blank" rel="nofollow noopener">💬 +86‑133‑4269‑1470</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="Go to homepage">
+        <!-- 优先加载 SVG，没有再回退到 PNG -->
+       <img src="images/logo.png" alt="HONGRUI Sole Maker logo" />
+        <b>HONGRUI Sole Maker</b>
+      </a>
+      <nav>
+        <a href="#lines">Product Lines</a>
+        <a href="#why">Why Us</a>
+        <a href="#specs">Specs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="cta alt" href="#contact">Get Samples</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Custom Outsoles · OEM / ODM</span>
+        <h1>Durable, Lightweight & Market‑Ready Outsoles for Footwear Brands</h1>
+        <p>Rubber · Ultra‑Lightweight TPR · EVA · TPU · PVC · Siping · TPR Welt sole · Leather welt sole · ABS · PC · TPU heel · IP injection. We design, develop molds, and ship globally. REACH/CA65 compliant, and on‑time delivery.</p>
+        <div class="cta-row">
+          <a class="cta alt" href="#contact">Request a Quote</a>
+          <a class="btn-line" href="#lines">Browse Product Lines</a>
+        </div>
+        <div style="margin-top:14px" class="hint">* Put your hero image at <code>/images/hero-outsole.jpg</code> to replace the right‑side photo.</div>
+      </div>
+      <div class="hero-card">
+        <figure class="hero-figure">
+          <img src="images/hero-outsole.jpg"
+     alt="Assorted custom outsole styles in rubber, TPR, EVA"
+     loading="lazy" />
+        </figure>
+        <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="badge">REACH / CA65</span>
+          <span class="badge">Pantone Color Match</span>
+          <span class="badge">Mold Development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust marquee (滚动品牌名，可替换) -->
+  <div class="marquee" aria-label="Trusted by these brands">
+    <div class="container">
+      <div class="marquee-track">
+        <b>KEEN®</b>
+        <b>Tommy Hilfiger™</b>
+        <b>Clark®</b>
+        <b>Calvin Klein®</b>
+        <b>H&M™</b>
+        <b>Levi's®</b>
+        <b>Tamaris™</b>
+        <b>Chicco®</b>
+        <b>HarborWalk™</b>
+        <b>SummitStep®</b>
+        <b>Zara®</b>
+        <b>Bugatti™</b>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Lines -->
+  <section id="lines">
+    <div class="container">
+      <h2 class="section-title">Outsole Product Lines</h2>
+      <p class="section-sub">Pick a base line and we’ll tailor hardness, weight, color and tread by application: boat, casual, dress, moc/loafers, outdoor and work.</p>
+      <div class="grid cols-3" style="margin-top:18px;">
+        <article class="card">
+          <img src="images/line-rubber.jpg" alt="Rubber outsole with high abrasion resistance" loading="lazy" />
+          <div class="body">
+            <div class="pill">Rubber</div>
+            <h3>Rubber Outsoles</h3>
+            <p class="meta">Durable, high abrasion resistance (DIN 150–200), slip‑resistant compounds optional.</p>
+            <div class="cta-row"><a class="btn-line" href="#contact">Request Details</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/line-ultra-tpr.jpg" alt="Ultra‑lightweight TPR outsole for casual & boat shoes" loading="lazy" />
+          <div class="body">
+            <div class="pill">Ultra‑Light TPR</div>
+            <h3>Ultra‑Lightweight TPR</h3>
+            <p class="meta">Up to ~30% lighter vs. standard rubber, flexible and comfortable for all‑day wear.</p>
+            <div class="cta-row"><a class="btn-line" href="#contact">Ask for Samples</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/line-eva.jpg" alt="EVA outsole with cushioned midfoot" loading="lazy" />
+          <div class="body">
+            <div class="pill">EVA</div>
+            <h3>EVA Outsoles</h3>
+            <p class="meta">Featherweight comfort. Great for sandals, casual and injection hybrids.</p>
+            <div class="cta-row"><a class="btn-line" href="#contact">Get Quotation</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/line-tpu.jpg" alt="TPU outsole with crisp edge and color options" loading="lazy" />
+          <div class="body">
+            <div class="pill">TPU</div>
+            <h3>TPU Outsoles</h3>
+            <p class="meta">High tear strength, vivid colors, great pattern definition, transparent options.</p>
+            <div class="cta-row"><a class="btn-line" href="#contact">Consult Now</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/line-welt.jpg" alt="Leather welt outsole with stitched edge" loading="lazy" />
+          <div class="body">
+            <div class="pill">Leather Welt</div>
+            <h3>Leather Welt Options</h3>
+            <p class="meta">Classic look; welt colors and stitches customizable, compatible with TPR/Rubber bases.</p>
+            <div class="cta-row"><a class="btn-line" href="#contact">Customize</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/line-2-3c.jpg" alt="Two‑color and three‑color outsole variants" loading="lazy" />
+          <div class="body">
+            <div class="pill">2C / 3C</div>
+            <h3>2‑Color / 3‑Color</h3>
+            <p class="meta">Multi‑color injection for brand accents. Reliable bond strength and clean color split.</p>
+            <div class="cta-row"><a class="btn-line" href="#contact">Start a Project</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HONGRUI Sole Maker | Custom Outsoles (Rubber, Ultra‑Light TPR, EVA)</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+.highlight-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: grid;
+gap: 12px;
+font-size: 16px;
+}
+.highlight-list li {
+background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+border: 1px solid rgba(255,255,255,.08);
+border-radius: 10px;
+padding: 12px 16px;
+}
+.highlight-list b { color: var(--accent); }
+</style>
+</head>
+<body>
+
+
+<!-- Why Us (converted to list) -->
+<section id="why">
+<div class="container">
+<h2 class="section-title">Why Brands Choose Us</h2>
+<ul class="highlight-list">
+<li><b>Small MOQs:</b> Startup‑friendly batches while keeping industrial consistency.</li>
+<li><b>Fast Sampling:</b> 7–10 days for standard lines, including color chips.</li>
+<li><b>Mold Development:</b> Full size‑run molds; precise replication from sketches or master samples.</li>
+<li><b>Pantone Match:</b> Tight tolerance color matching for 2C/3C and brand palettes.</li>
+<li><b>Compliance:</b> REACH and CA65 compliant compounds; third‑party test support.</li>
+<li><b>On‑Time Delivery:</b> Digital planning and QA gates to ship when you need it.</li>
+</ul>
+</div>
+</section>
+
+
+</body>
+</html>
+  </section>
+
+  <!-- Specs & Options -->
+  <section id="specs">
+    <div class="container">
+      <h2 class="section-title">Specs & Options</h2>
+      <p class="section-sub">Shore A hardness 45–75 (line‑dependent), abrasion DIN 150–300, flex @‑20°C, slip‑resistant compounds, anti‑yellowing, recycled content options upon request.</p>
+      <div class="grid cols-4" style="margin-top:18px;">
+        <div class="feat"><h4>Hardness</h4><p class="hint">45–75 Shore A</p></div>
+        <div class="feat"><h4>Abrasion</h4><p class="hint">DIN 150–300</p></div>
+        <div class="feat"><h4>Slip</h4><p class="hint">SRC‑ready compounds</p></div>
+        <div class="feat"><h4>Cold Flex</h4><p class="hint">Pass @‑20°C</p></div>
+        <div class="feat"><h4>Colors</h4><p class="hint">Pantone / Custom</p></div>
+        <div class="feat"><h4>Size Range</h4><p class="hint">EU 35–47 (customizable)</p></div>
+        <div class="feat"><h4>Branding</h4><p class="hint">Logos, deboss, patterns</p></div>
+        <div class="feat"><h4>Packaging</h4><p class="hint">Pairs per carton / label</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact (Netlify form) -->
+  <section id="contact">
+    <div class="container contact">
+      <div>
+        <h2 class="section-title">Tell Us What You Need</h2>
+        <p class="section-sub">Leave <b>either</b> your email <b>or</b> phone (one is enough). We’ll get back to you with samples, pricing and lead‑time within 24 hours.</p>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+          <div>
+            <label for="company">Company / Name (optional)</label>
+            <input id="company" name="company" placeholder="Your company or name" />
+          </div>
+          <div>
+            <label for="email">Email (one of email or phone)</label>
+            <input id="email" name="email" type="email" placeholder="you@brand.com" />
+          </div>
+          <div>
+            <label for="phone">Phone / WhatsApp (or email)</label>
+            <input id="phone" name="phone" placeholder="+1 555 000 0000" />
+          </div>
+          <div>
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" placeholder="Outsole line, size range, color, hardness, timeline…"></textarea>
+          </div>
+          <button class="cta alt" type="submit">Send</button>
+          <div id="formHint" class="hint">We only need <b>one</b> contact: email <i>or</i> phone.</div>
+        </form>
+      </div>
+      <aside>
+        <div class="card" style="padding:16px;">
+          <h3>Factory Facts</h3>
+          <ul class="hint">
+            <li>Capacity: 80k–120k pairs / month (seasonal)</li>
+            <li>Compounds: Rubber, TPR, EVA, TPU</li>
+            <li>Testing: DIN abrasion, flex, slip</li>
+            <li>Compliance: REACH / CA65</li>
+            <li>Trade terms: FOB / EXW / CIF</li>
+          </ul>
+          <div class="pill">Global Shipping</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; gap:16px; align-items:center; flex-wrap:wrap;">
+      <div>© <span id="year"></span> HONGRUI Sole Maker. All rights reserved.</div>
+      <div class="footer-contacts">
+        <a href="mailto:leo.liu@solemakers.vip" rel="nofollow noopener">Email: leo.liu@solemakers.vip</a>
+        &nbsp;·&nbsp;
+        <a href="https://wa.me/8613342691470" target="_blank" rel="nofollow noopener">Phone / WhatsApp: +86‑133‑4269‑1470</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA (mobile) -->
+  <div class="sticky-cta">
+    <div class="container" style="display:flex; justify-content:space-between; gap:10px; align-items:center;">
+      <b>Need Outsoles?</b>
+      <a href="#contact" class="cta alt">Get Samples</a>
+    </div>
+  </div>
+
+  <!-- Floating quick-contact -->
+  <div class="float-contact">
+    <a class="contact-chip chip-accent" href="#contact" aria-label="Open contact form">📨 Contact Form</a>
+  </div>
+
+  <!-- FAQPage JSON‑LD (optional) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What is the usual outsole sample lead‑time?",
+      "acceptedAnswer": {"@type": "Answer", "text": "7–10 days for standard lines; complex molds may take longer."}
+    },{
+      "@type": "Question",
+      "name": "Can you match Pantone colors?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, we provide tight‑tolerance Pantone color matching including 2C/3C variants."}
+    },{
+      "@type": "Question",
+      "name": "Do you support small MOQs?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, we are startup‑friendly while preserving industrial quality controls."}
+    }]
+  }
+  </script>
+
+  <script>
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple validation: require at least email OR phone
+    const form = document.getElementById('contactForm');
+    const hint = document.getElementById('formHint');
+    form?.addEventListener('submit', (e) => {
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      if (!email && !phone) {
+        e.preventDefault();
+        hint.style.color = '#ffb3b3';
+        hint.innerHTML = 'Please provide <b>email</b> or <b>phone</b> so we can reach you.';
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  </script>
+
+  <!--
+  📁 图片与部署说明
+  1) 将本文件保存为 index.html
+  2) 在同级目录创建 /images 文件夹，把以下图片放进去并替换：
+     - hero-outsole.jpg (主页大图)
+     - line-rubber.jpg, line-ultra-tpr.jpg, line-eva.jpg, line-tpu.jpg, line-welt.jpg, line-2-3c.jpg
+     - logo.svg 或 logo.png（二选一，若两者都提供优先使用 SVG）
+     - og-sole.jpg (用于社交分享)
+  3) 直接把包含 index.html 与 images/ 的文件夹上传到 Netlify（或拖拽整个文件夹）。
+  4) 表单已接入 Netlify（data-netlify='true'），部署后即可接收提交；在 Netlify 后台 Forms 查看。
+  5) 将 <link rel='canonical'>、og:url、Organization JSON‑LD 的 URL 换成你的域名。
+  -->
+</body>
+</html>
