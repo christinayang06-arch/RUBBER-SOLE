@@ -9,13 +9,14 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BWV43LTTTY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-BWV43LTTTY');
   </script>
 
   <!-- SEO -->
   <meta name="description" content="OEM/ODM outsole manufacturer for footwear brands. Rubber, Ultra-Lightweight TPR, EVA & TPU outsoles， PC, TPU, ABS HEEL. Fast sampling, small MOQs, mold development, Pantone color matching, REACH/CA65 compliant." />
+  <!-- TODO: 部署后把 canonical/og:url 改成你的正式域名 -->
   <link rel="canonical" href="https://example.com/outsoles" />
 
   <!-- Open Graph / Twitter -->
@@ -66,92 +67,94 @@
   }
   </script>
 
-  <!-- Your CSS -->
+  <!-- Optional external CSS（没有也不影响功能） -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Inline styles (kept from your original) -->
+  <!-- Inline styles -->
   <style>
     :root {
-      --bg: #0b0c10; --card: #111319; --muted: #a7b0c0; --text: #e8ecf3;
-      --brand: #3aa4ff; --brand-2: #9bffd1; --accent: #ffd166; --accent-2: #ff9f1a;
-      --success: #30c48d; --danger: #ff6b6b; --radius: 14px; --shadow: 0 10px 30px rgba(0,0,0,.25);
-      --maxw: 1180px; --logoH-desktop: 68px; --logoH-mobile: 52px;
-      --brandName-desktop: 28px; --brandName-mobile: 22px;
+      --bg:#0b0c10; --card:#111319; --muted:#a7b0c0; --text:#e8ecf3;
+      --brand:#3aa4ff; --brand-2:#9bffd1; --accent:#ffd166; --accent-2:#ff9f1a;
+      --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.25); --maxw:1180px;
+      --logoH-desktop:68px; --logoH-mobile:52px; --brandName-desktop:28px; --brandName-mobile:22px;
     }
-    * { box-sizing: border-box; }
-    html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family:'Lato',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
-    a { color: var(--brand); text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
-    .topbar { background: linear-gradient(90deg, rgba(58,164,255,.15), rgba(155,255,209,.10)); font-size: 13px; color: var(--muted); }
-    .topbar .container { display:flex; gap:16px; align-items:center; justify-content:space-between; padding:8px 20px; }
-    .topbar .hint { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
-    .header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(6px); background: rgba(11,12,16,.7); border-bottom: 1px solid rgba(255,255,255,.06); }
-    .nav { display:flex; align-items:center; justify-content:space-between; padding:12px 0; gap:16px; }
-    .brand { display:inline-flex; align-items:center; gap:12px; min-height: calc(var(--logoH-desktop) + 10px); }
-    .brand img { height: var(--logoH-desktop); width:auto; border-radius:10px; }
-    .brand b { letter-spacing:.3px; font-size:var(--brandName-desktop); font-weight:900; }
-    .nav a { color:var(--text); opacity:.85; margin:0 8px; font-weight:700; }
-    .cta { display:inline-flex; align-items:center; gap:8px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#03121a; padding:11px 18px; border-radius:999px; font-weight:800; box-shadow:var(--shadow); }
-    .cta.alt { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:#2b1300; }
-    .hero { position:relative; padding:76px 0 34px; background:
-      radial-gradient(1200px 500px at 70% -15%, rgba(58,164,255,.15), transparent 60%),
-      radial-gradient(900px 500px at 20% -15%, rgba(155,255,209,.12), transparent 60%); }
-    .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:30px; align-items:center; }
-    .eyebrow { display:inline-flex; align-items:center; gap:8px; color:var(--brand-2); font-weight:800; font-size:13px; letter-spacing:.6px; text-transform:uppercase; }
-    .hero h1 { font-size:clamp(30px, 4.4vw, 56px); line-height:1.04; margin:10px 0 14px; }
-    .hero p { color:var(--muted); font-size:17px; max-width:62ch; }
-    .hero .cta-row { display:flex; gap:14px; margin-top:18px; flex-wrap:wrap; }
-    .btn-line { border:1px solid rgba(255,255,255,.18); padding:10px 16px; border-radius:999px; font-weight:800; color:var(--text); }
-    .hero-card { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:14px; }
-    .hero-figure { border-radius:var(--radius); overflow:hidden; background:#0f1219; border:1px solid rgba(255,255,255,.06); box-shadow:var(--shadow); }
-    .badge { display:inline-flex; align-items:center; gap:8px; background:rgba(48,196,141,.18); color:#bfffe7; padding:6px 10px; border-radius:999px; font-weight:800; font-size:12px; }
-    .marquee { border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06); padding:10px 0; overflow:hidden; }
-    .marquee-track { display:flex; gap:40px; animation: scroll 26s linear infinite; white-space:nowrap; }
-    .marquee:hover .marquee-track { animation-play-state: paused; }
-    .marquee b { opacity:.7; font-weight:900; letter-spacing:.6px; }
-    @keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-    section { padding:64px 0; }
-    .section-title { font-size:clamp(22px, 2.8vw, 36px); margin:0 0 22px; }
-    .section-sub { color:var(--muted); max-width:62ch; }
-    .grid { display:grid; gap:18px; }
-    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .grid.cols-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
-    .card { background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; }
-    .card .body { padding:16px; display:grid; gap:8px; }
-    .pill { display:inline-flex; align-items:center; gap:8px; font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.12); color:var(--muted); }
-    .meta { color:var(--muted); font-size:14px; }
-    .features { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; }
-    .feat { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:14px; display:grid; gap:8px; }
-    .feat h4 { margin:0; }
-    .timeline { display:grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap:14px; }
-    .step { background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:14px; }
-    .step .num { font-weight:900; font-size:28px; color:var(--brand-2); }
-    .contact { display:grid; grid-template-columns:1.1fr .9fr; gap:18px; align-items:start; }
-    form { background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:18px; display:grid; gap:12px; }
-    label { font-weight:700; font-size:14px; }
-    input, textarea, select { background:#0f1219; color:var(--text); border:1px solid rgba(255,255,255,.14); border-radius:10px; padding:10px 12px; font:inherit; }
-    textarea { min-height:120px; resize:vertical; }
-    .hint { color:var(--muted); font-size:13px; }
-    footer { border-top:1px solid rgba(255,255,255,.08); background:#0a0b10; padding:26px 0; color:var(--muted); }
-    .footer-contacts a { font-weight:900; color:var(--accent); }
-    .footer-contacts a:hover { color:var(--accent-2); }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Lato',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    .topbar{background:linear-gradient(90deg,rgba(58,164,255,.15),rgba(155,255,209,.10));font-size:13px;color:var(--muted)}
+    .topbar .container{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:8px 20px}
+    .topbar .hint{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+
+    .header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(6px);background:rgba(11,12,16,.7);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:inline-flex;align-items:center;gap:12px;min-height:calc(var(--logoH-desktop) + 10px)}
+    .brand img{height:var(--logoH-desktop);width:auto;border-radius:10px}
+    .brand b{letter-spacing:.3px;font-size:var(--brandName-desktop);font-weight:900}
+    .nav a{color:var(--text);opacity:.85;margin:0 8px;font-weight:700}
+    .cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#03121a;padding:11px 18px;border-radius:999px;font-weight:800;box-shadow:var(--shadow)}
+    .cta.alt{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#2b1300}
+    .btn-line{border:1px solid rgba(255,255,255,.18);padding:10px 16px;border-radius:999px;font-weight:800;color:var(--text)}
+
+    .hero{position:relative;padding:76px 0 34px;background:
+      radial-gradient(1200px 500px at 70% -15%,rgba(58,164,255,.15),transparent 60%),
+      radial-gradient(900px 500px at 20% -15%,rgba(155,255,209,.12),transparent 60%)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--brand-2);font-weight:800;font-size:13px;letter-spacing:.6px;text-transform:uppercase}
+    .hero h1{font-size:clamp(30px,4.4vw,56px);line-height:1.04;margin:10px 0 14px}
+    .hero p{color:var(--muted);font-size:17px;max-width:62ch}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:14px}
+    .hero-figure{border-radius:var(--radius);overflow:hidden;background:#0f1219;border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow)}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(48,196,141,.18);color:#bfffe7;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px}
+
+    .marquee{border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:10px 0;overflow:hidden}
+    .marquee-track{display:flex;gap:40px;white-space:nowrap;animation:scroll 26s linear infinite;width:max-content;will-change:transform}
+    .marquee:hover .marquee-track{animation-play-state:paused}
+    .marquee b{opacity:.7;font-weight:900;letter-spacing:.6px}
+    @keyframes scroll{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+    @media (prefers-reduced-motion: reduce){ .marquee-track{animation-duration:60s} } /* 放慢而非关闭 */
+
+    section{padding:64px 0}
+    .section-title{font-size:clamp(22px,2.8vw,36px);margin:0 0 22px}
+    .section-sub{color:var(--muted);max-width:62ch}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+    .card .body{padding:16px;display:grid;gap:8px}
+    .pill{display:inline-flex;align-items:center;gap:8px;font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:var(--muted)}
+    .meta{color:var(--muted);font-size:14px}
+
+    .features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .feat{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:14px}
+
+    .timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+    .step .num{font-weight:900;font-size:28px;color:var(--brand-2)}
+
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
+    .hint{color:var(--muted);font-size:13px}
+
+    footer{border-top:1px solid rgba(255,255,255,.08);background:#0a0b10;padding:26px 0;color:var(--muted)}
+    .footer-contacts a{font-weight:900;color:var(--accent)}
+    .footer-contacts a:hover{color:var(--accent-2)}
+
     @media (max-width:960px){
       .brand img{height:var(--logoH-mobile)} .brand b{font-size:var(--brandName-mobile)}
       .hero-grid,.contact{grid-template-columns:1fr}
       .grid.cols-3,.grid.cols-4{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .features{grid-template-columns:1fr 1fr} .timeline{grid-template-columns:1fr 1fr}
+      .features{grid-template-columns:1fr 1fr}
+      .timeline{grid-template-columns:1fr 1fr}
     }
     @media (max-width:640px){
       .grid.cols-3,.grid.cols-4,.features{grid-template-columns:1fr}
       .timeline{grid-template-columns:1fr}
     }
-    .sticky-cta { position:sticky; bottom:0; z-index:40; backdrop-filter:saturate(140%) blur(6px); background:rgba(11,12,16,.85); border-top:1px solid rgba(255,255,255,.08); padding:10px 16px; display:none; }
+
+    .sticky-cta{position:sticky;bottom:0;z-index:40;backdrop-filter:saturate(140%) blur(6px);background:rgba(11,12,16,.85);border-top:1px solid rgba(255,255,255,.08);padding:10px 16px;display:none}
     @media (max-width:960px){ .sticky-cta{display:block} }
-    .float-contact { position:fixed; right:18px; bottom:18px; z-index:60; }
-    .highlight-list { list-style:none; padding:0; margin:0; display:grid; gap:12px; font-size:16px; }
-    .highlight-list li { background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:12px 16px; }
-    .highlight-list b { color: var(--accent); }
+    .float-contact{position:fixed;right:18px;bottom:18px;z-index:60}
   </style>
 </head>
 <body>
@@ -162,7 +165,7 @@
       <div class="hint"><span>Lead-time for samples: <b>7–10 days</b></span><span>•</span><span>MOQ friendly</span></div>
       <div class="hint" aria-label="Quick contacts">
         <a class="contact-chip chip-accent" href="mailto:leo.liu@solemakers.vip" rel="nofollow noopener">✉️ leo.liu@solemakers.vip</a>
-        <a class="contact-chip chip-brand wa-link" href="https://wa.me/8613342691470" target="_blank" rel="nofollow noopener">💬 +86-133-4269-1470</a>
+        <a class="contact-chip chip-brand" href="https://wa.me/8613342691470" target="_blank" rel="nofollow noopener">💬 +86-133-4269-1470</a>
       </div>
     </div>
   </div>
@@ -195,7 +198,7 @@
           <a class="cta alt" href="#contact">Request a Quote</a>
           <a class="btn-line" href="#lines">Browse Product Lines</a>
         </div>
-        <div style="margin-top:14px" class="hint">* Put your hero image at <code>/images/hero-outsole.jpg</code> to replace the right-side photo.</div>
+        <div class="hint" style="margin-top:14px">* Put your hero image at <code>/images/hero-outsole.jpg</code> to replace the right-side photo.</div>
       </div>
       <div class="hero-card">
         <figure class="hero-figure">
@@ -210,10 +213,13 @@
     </div>
   </section>
 
-  <!-- Trust marquee -->
+  <!-- Trust marquee (复制一遍内容以实现无缝滚动) -->
   <div class="marquee" aria-label="Trusted by these brands">
     <div class="container">
-      <div class="marquee-track">
+      <div class="marquee-track" aria-hidden="true">
+        <b>KEEN®</b><b>Tommy Hilfiger™</b><b>Clark®</b><b>Calvin Klein®</b><b>H&M™</b>
+        <b>Levi's®</b><b>Tamaris™</b><b>Chicco®</b><b>HarborWalk™</b><b>SummitStep®</b><b>Zara®</b><b>Bugatti™</b>
+        <!-- duplicate -->
         <b>KEEN®</b><b>Tommy Hilfiger™</b><b>Clark®</b><b>Calvin Klein®</b><b>H&M™</b>
         <b>Levi's®</b><b>Tamaris™</b><b>Chicco®</b><b>HarborWalk™</b><b>SummitStep®</b><b>Zara®</b><b>Bugatti™</b>
       </div>
@@ -317,37 +323,23 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact（极简联系：WhatsApp / Email） -->
   <section id="contact">
     <div class="container contact">
       <div>
         <h2 class="section-title">Tell Us What You Need</h2>
-        <p class="section-sub">Leave <b>either</b> your email <b>or</b> phone (one is enough). We’ll get back to you with samples, pricing and lead-time within 24 hours.</p>
-        <form id="contactForm" name="contact" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact" />
-  <input type="hidden" name="form-name" value="contact" />
-  <input type="hidden" name="thanks" value="/thank-you.html" />
-          <p style="display:none"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
-          <div>
-            <label for="company">Company / Name (optional)</label>
-            <input id="company" name="company" placeholder="Your company or name" />
-          </div>
-          <div>
-            <label for="email">Email (one of email or phone)</label>
-            <input id="email" name="email" type="email" placeholder="you@brand.com" />
-          </div>
-          <div>
-            <label for="phone">Phone / WhatsApp (or email)</label>
-            <input id="phone" name="phone" placeholder="+1 555 000 0000" />
-          </div>
-          <div>
-            <label for="message">Message (optional)</label>
-            <textarea id="message" name="message" placeholder="Outsole line, size range, color, hardness, timeline…"></textarea>
-          </div>
-          <button class="cta alt" type="submit">Send</button>
-          <div id="formHint" class="hint">We only need <b>one</b> contact: email <i>or</i> phone.</div>
-        </form>
+        <p class="section-sub">Quick contact — choose one method you prefer. We’ll reply within 24 hours.</p>
+
+        <div class="quick-contact" style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a id="cta-whatsapp" class="cta alt"
+             href="https://wa.me/8613342691470?text=Hi%2C%20I%27m%20interested%20in%20outsoles."
+             target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+
+          <a id="cta-email" class="btn-line"
+             href="mailto:leo.liu@solemakers.vip?subject=Outsole%20Inquiry&body=Hi%2C%20we%20need%20(outsole%20type%2Fsize%2Fqty)...">✉️ Send Email</a>
+        </div>
       </div>
+
       <aside>
         <div class="card" style="padding:16px;">
           <h3>Factory Facts</h3>
@@ -371,7 +363,7 @@
       <div class="footer-contacts">
         <a href="mailto:leo.liu@solemakers.vip" rel="nofollow noopener">Email: leo.liu@solemakers.vip</a>
         &nbsp;·&nbsp;
-        <a class="wa-link" href="https://wa.me/8613342691470" target="_blank" rel="nofollow noopener">Phone / WhatsApp: +86-133-4269-1470</a>
+        <a href="https://wa.me/8613342691470" target="_blank" rel="nofollow noopener">Phone / WhatsApp: +86-133-4269-1470</a>
       </div>
     </div>
   </footer>
@@ -386,78 +378,55 @@
 
   <!-- Floating quick-contact -->
   <div class="float-contact">
-    <a class="contact-chip chip-accent" href="#contact" aria-label="Open contact form">📨 Contact Form</a>
+    <a class="contact-chip chip-accent" href="#contact" aria-label="Open contact">📨 Contact</a>
   </div>
 
-  <!-- FAQPage JSON-LD (optional) -->
+  <!-- FAQPage JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{
-      "@type": "Question",
-      "name": "What is the usual outsole sample lead-time?",
-      "acceptedAnswer": {"@type": "Answer", "text": "7–10 days for standard lines; complex molds may take longer."}
+      "@type": "Question","name": "What is the usual outsole sample lead-time?",
+      "acceptedAnswer": {"@type":"Answer","text":"7–10 days for standard lines; complex molds may take longer."}
     },{
-      "@type": "Question",
-      "name": "Can you match Pantone colors?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes, we provide tight-tolerance Pantone color matching including 2C/3C variants."}
+      "@type": "Question","name":"Can you match Pantone colors?",
+      "acceptedAnswer": {"@type":"Answer","text":"Yes, we provide tight-tolerance Pantone color matching including 2C/3C variants."}
     },{
-      "@type": "Question",
-      "name": "Do you support small MOQs?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes, we are startup-friendly while preserving industrial quality controls."}
+      "@type": "Question","name":"Do you support small MOQs?",
+      "acceptedAnswer": {"@type":"Answer","text":"Yes, we are startup-friendly while preserving industrial quality controls."}
     }]
   }
   </script>
 
-  <!-- Page JS (year + simple validation + GA4 custom events) -->
+  <!-- Page JS（年份 + GA4 点击埋点） -->
   <script>
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Simple validation: need email OR phone
-    const form = document.getElementById('contactForm');
-    const hint = document.getElementById('formHint');
-    form?.addEventListener('submit', (e) => {
-      const email = document.getElementById('email').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      if (!email && !phone) {
-        e.preventDefault();
-        hint.style.color = '#ffb3b3';
-        hint.innerHTML = 'Please provide <b>email</b> or <b>phone</b> so we can reach you.';
-        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return;
-      }
-      // GA4 conversion event
-      gtag('event', 'lead_form_submit', {
-        event_category: 'engagement',
-        event_label: 'contactForm'
-      });
-    });
+    // GA4: track quick-contact clicks
+    (function () {
+      var w = document.getElementById('cta-whatsapp');
+      var e = document.getElementById('cta-email');
 
-    // Track ALL WhatsApp clicks on the page
-    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
-      a.addEventListener('click', () => {
-        gtag('event', 'whatsapp_click', {
-          event_category: 'engagement',
-          event_label: a.href
+      if (w) w.addEventListener('click', function(){
+        gtag('event','whatsapp_click',{event_category:'lead',value:1});
+      });
+      if (e) e.addEventListener('click', function(){
+        gtag('event','email_click',{event_category:'lead',value:1});
+      });
+
+      // 也跟踪页面其它任何 wa.me 链接（如顶部/底部）
+      document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a){
+        a.addEventListener('click', function(){
+          gtag('event','whatsapp_click',{event_category:'lead',value:1});
         });
       });
-    });
+    })();
   </script>
 
-  <!--
-  📁 图片与部署说明
-  1) 将本文件保存为 index.html
-  2) 在同级目录创建 /images 文件夹，并放置：
-     - hero-outsole.jpg
-     - line-rubber.jpg, line-ultra-tpr.jpg, line-eva.jpg, line-tpu.jpg, line-welt.jpg, line-2-3c.jpg
-     - logo.png（或 logo.svg）
-     - og-sole.jpg
-  3) 部署到 GitHub Pages / Netlify。Netlify 表单（data-netlify='true'）会在后台 Forms 收件。
-  4) 将 canonical、og:url 与 Organization JSON-LD 的 URL 换成你的真实域名。
-  -->
 </body>
 </html>
 add GA4 tracking code
 fix form action
+update
